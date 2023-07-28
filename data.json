@@ -1,0 +1,70 @@
+{
+"restaurant": {
+"name": "Voyage Restaurant",
+"address": {
+"streetAddress": "na Jiřáku 29",
+"addressLocality": "Praha 3",
+"addressCountry": "Czech Republic"
+},
+"phone": "+420 888 333 222",
+"email": "info@voyagerestaurant.com",
+"menu": [
+{
+"name": "Soupe à l`oignon",
+"type": "Appetizer",
+"price": "120 czk"
+},
+{
+"name": "Chocolate soufflé",
+"type": "Dessert",
+"price": "110 czk"
+},
+{
+"name": "Beef bourguignon",
+"type": "Main Course",
+"price": "340 czk"
+},
+{
+"name": "Ratatouille",
+"type": "Main Course",
+"price": "210 czk"
+},
+{
+"name": "Moules Frites",
+"type": "Main Course",
+"price": "260 czk"
+}
+],
+"reservation": [
+{
+"id": "1",
+"capacity": "8",
+"location": "Public Room"
+},
+{
+"id": "2",
+"capacity": "3",
+"location": "Fireplace Corner"
+},
+{
+"id": "3",
+"capacity": "5",
+"location": "Private Zone"
+}
+],
+"chef": [
+{
+"name": "Roman Kopp",
+"specialty": "French cuisine",
+"status": "pro",
+"experience": "19"
+},
+{
+"name": "baby Kopp",
+"specialty": "sese cuisine",
+"status": "noob",
+"experience": "5"
+}
+]
+}
+}

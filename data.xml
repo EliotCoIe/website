@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transformation.xslt"?>
+<restaurant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="schema.xsd">
+    <name>Voyage Restaurant</name>
+    <address>
+        <streetAddress>na Jiřáku 29</streetAddress>
+        <addressLocality>Praha 3</addressLocality>
+        <addressCountry>Czech Republic</addressCountry>
+    </address>
+    <phone>+420 888 333 222</phone>
+    <email>info@voyagerestaurant.com</email>
+    <menu>
+        <item>
+            <name>Soupe à l`oignon</name>
+            <description>Our traditional French soup made of beef stock, onions, and served with croutons and melted cheese on the side</description>
+            <price>120 czk</price>
+            <type>Appetizer</type>
+        </item>
+        <item>
+            <name>Beef bourguignon</name>
+            <description>Slow cooked beef in a red wine sauce with onions, mushrooms, and bacon lardons</description>
+            <price>340 czk</price>
+            <type>Main Course</type>
+        </item>
+        <item>
+            <name>Ratatouille</name>
+            <description>Our seasonal vegetable stew with homemade sauce</description>
+            <price>210 czk</price>
+            <type>Main Course</type>
+        </item>
+        <item>
+            <name>Chocolate soufflé</name>
+            <description>Exquisite French dessert that combines dark chocolate with a creamy egg yolk base and fluffy egg whites</description>
+            <price>110 czk</price>
+            <type>Dessert</type>
+        </item>
+        <item>
+            <name>Moules Frites</name>
+            <description>Classic French dish of mussels cooked with white wine and served with fries</description>
+            <price>260 czk</price>
+            <type>Main Course</type>
+        </item>
+    </menu>
+    <reservation>
+        <table>
+            <id>1</id>
+            <capacity>8</capacity>
+            <location>Public Room</location>
+        </table>
+        <table>
+            <id>2</id>
+            <capacity>3</capacity>
+            <location>Fireplace Corner</location>
+        </table>
+        <table>
+            <id>3</id>
+            <capacity>5</capacity>
+            <location>Private Zone</location>
+        </table>
+    </reservation>
+    <chef>
+        <name>Roman Kopp</name>
+        <specialty>French cuisine</specialty>
+        <experience>19</experience>
+    </chef>
+    <chef>
+        <name>baby Kopp</name>
+        <specialty>sese cuisine</specialty>
+        <experience>5</experience>
+    </chef>
+</restaurant>

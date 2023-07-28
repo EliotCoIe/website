@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="restaurant">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="address">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="streetAddress" type="xs:string"/>
+                            <xs:element name="addressLocality" type="xs:string"/>
+                            <xs:element name="addressCountry" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="phone" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="menu">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="item" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="description" type="xs:string"/>
+                                        <xs:element name="price" type="xs:string"/>
+                                        <xs:element name="type" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reservation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="table" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:integer"/>
+                                        <xs:element name="capacity" type="xs:integer"/>
+                                        <xs:element name="location" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="chef" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="specialty" type="xs:string"/>
+                            <xs:element name="experience" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="priceType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d+\.\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Regex in order to provide valid price value (2 digits before and after point) -->
+
+    <xs:element name="menu">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="item" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="description" type="xs:string"/>
+                            <xs:element name="price" type="priceType"/>
+                            <xs:element name="type" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- At least 1 year of experience required -->
+
+    <xs:element name="experience">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- table capacity is in range from 1 to 10 -->
+
+    <xs:element name="capacity">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="10"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Regex in order to provide valid email format -->
+    <xs:element name="email">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- type element in menu can be eiter appetizer, entree or dessert -->
+
+    <xs:element name="type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="appetizer"/>
+                <xs:enumeration value="entree"/>
+                <xs:enumeration value="dessert"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+</xs:schema>
