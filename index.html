@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Restaurant">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Preconnecting to Google API and importing font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Setting metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voyage restaurant is a one of the best French cuisine restaurants in Prague with Michelin star!">
+    <meta name="keywords" content="Voyage, restaurant, french cuisine, cocktails, food">
+    <meta name="author" content="Voyage">
+    <meta property="og:title" content="Voyage Restaurant">
+    <meta property="og:description" content="Voyage restaurant is a one of the best French cuisine restaurants in Prague with Michelin star!">
+    <meta property="og:image" content="#"> <!-- link -->
+    <title>Voyage Restaurant</title>
+    <!-- Setting structured JSON-LD data for SE -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Restaurant",
+            "name": "Voyage Restaurant",
+            "description": "Voyage restaurant is a one of the best French cuisine restaurants in Prague with Michelin star!",
+            "telephone": "+420 888 333 222",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "na Jiřáku 29",
+                "addressLocality": "Praha 3",
+                "addressCountry": "Czech Republic"
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "10:00",
+                    "closes": "22:00"
+                }
+            ]
+        }
+    </script>
+</head>
+<body>
+<header>
+    <!-- Setting header and navbar for restaurant -->
+    <h1>Voyage restaurant</h1>
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu of a day</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#hours">Opening hours</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="menu">
+    <!-- Setting daily special offer menu in a form of table -->
+    <h2>Today special offer</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Meal</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Soupe à l’oignon</td>
+            <td>Our traditional french soup made of beef stock, onions and served with croutons and melted cheese on the side</td>
+            <td>120 czk</td>
+        </tr>
+        <tr>
+            <td>Beef bourguignon</td>
+            <td>Slow cooked beef in a red wine sauce with onions, mushrooms and bacon lardons</td>
+            <td>340 czk</td>
+        </tr>
+        <tr>
+            <td>Ratatouille</td>
+            <td>Our seasonal vegetable stew with homemade sauce</td>
+            <td>210 czk</td>
+        </tr>
+        <tr>
+            <td>Chocolate soufflé</td>
+            <td>Exquisite French dessert that combines dark chocolate with a creamy egg yolk base and fluffy egg whites.</td>
+            <td>110 czk</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+<section id="about">
+    <!-- Setting about restaurant section -->
+    <article>
+        <h2>About Us</h2>
+        <p>A eating establishment that provides its customers with a distinctive culinary experience is a synonym of our "Voyage Restaurant". Our restaurant, located in the middle of the city, is known for its French cuisine and attentive service.</p>
+        <p>We believe that food is meant to be enjoyed and should bring people together. That's why we have created a warm and welcoming atmosphere where you can come and enjoy a meal with friends and family.</p>
+        <img src="images/about-us.jpg" alt="Voyage restaurant interior">
+        <p>At Voyage, we also believe in sustainability and reducing our carbon footprint. That's why we use biodegradable packaging and take measures to reduce food waste.</p>
+    </article>
+</section>
+<section id ="news">
+    <!-- Setting news section -->
+    <h2>News</h2>
+    <article>
+        <h3>We received Michelin star!</h3>
+        <p>We are happy to inform you that we have recently become the third restaurant in Prague to receive a Michelin star for our outstanding cuisine, atmosphere and pleasant staff!</p>
+        <time datetime="2023-04-10">April 10, 2023</time>
+    </article>
+    <article>
+        <h3>Update in working hours</h3>
+        <p>Now we are open from 10:00 to 22:00 on weekdays. We look forward to all visitors to taste our delicacies.</p>
+        <time datetime="2023-03-29">March 29, 2023</time>
+    </article>
+    <article>
+        <h3>New cocktails!</h3>
+        <p>Recently, a new bartender has joined our friendly team! We welcome our new bartender Jakub with 10 years of experience. We are pleased to inform all our guests that from today we are starting to make new cocktails. For details, ask the waiters.</p>
+        <time datetime="2023-03-14">March 14, 2023</time>
+    </article>
+</section>
+<section id="location">
+    <!-- Setting location information -->
+    <h3>Our address: </h3>
+    <address>
+        na Jiřáku 29<br>
+        Praha 3<br>
+        Phone: +420 888 333 222
+    </address>
+</section>
+<section id="hours">
+    <!-- Setting working hours -->
+    <h2>Hours</h2>
+    <p>We are open:</p>
+    <ul>
+        <li>Monday - Friday: 10:00 - 22:00</li>
+        <li>Saturday - Sunday: 15:00 - 22:00</li>
+    </ul>
+    <aside>
+        <!-- Aside element to represent content indirectly related -->
+        Please note that opening hours may change during holidays. Call the restaurant for more information.
+    </aside>
+</section>
+<footer>
+    <!-- Setting footer section -->
+    <p>Student project</p>
+    <p>Authors: Tulessenov Yerkin, Deeb Mohsen, David Arustamyan, Yehor Hromov</p>
+</footer>
+</body>
+</html>
